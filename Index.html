@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Learning Hub Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="bg-overlay"></div> <!-- Hada howa li ghadi i-beddel tswira dial background -->
+
+    <div class="container">
+        <header>
+            <h1>Dev Learning Hub</h1>
+            <p>Select a language to start learning</p>
+        </header>
+        <section class="site-description">
+    <div class="desc-card">
+        <h3>🚀 Explore & Learn</h3>
+        <p>This is your guide to learning web development quickly! 🚀 Choose a language, view the code, and see the results instantly!</p>
+        <div class="features-dots">
+            <span>• Build</span>
+            <span>• Design</span>
+            <span>• Logic</span>
+            <span>• Server</span>
+        </div>
+    </div>
+    <section id="the-lab">
+    <h2>🧪 The Code Lab</h2>
+    <p>Test your code!</p>
+    
+    <div class="lab-container">
+        <!-- Jiha dial l-koud -->
+        <div class="editor-side">
+            <div class="tab-bar">
+                <span class="active">index.html</span>
+                <button onclick="runCode()" class="run-btn">RUN ▶</button>
+            </div>
+            <textarea id="labEditor" spellcheck="false"><!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { color: black; }
+    h1 { color: blue; }
+  </style>
+</head>
+<body>
+
+  <h1>You can Test your code here</h1>
+  <p>RUN and Test</p>
+
+</body>
+</html></textarea>
+        </div>
+
+        <!-- Jiha dial l-natija (Output) -->
+        <div class="output-side">
+            <div class="tab-bar">
+                <span>Output</span>
+            </div>
+            <iframe id="outputFrame"></iframe>
+        </div>
+    </div>
+</section>
+</section>
+        
+        <!-- Main Menu -->
+        <div id="category-menu" class="menu-grid">
+            <div class="cat-card html" onclick="openCategory('html')">
+                <div class="icon">HTML</div>
+                <span>HyperText Markup Language</span>
+            </div>
+            <div class="cat-card css" onclick="openCategory('css')">
+                <div class="icon">CSS</div>
+                <span>Cascading Style Sheets</span>
+            </div>
+            <div class="cat-card js" onclick="openCategory('js')">
+                <div class="icon">JS</div>
+                <span>JavaScript Logic</span>
+            </div>
+            <div class="cat-card php" onclick="openCategory('php')">
+                <div class="icon">PHP</div>
+                <span>Server Side Scripting</span>
+            </div>
+        </div>
+
+        <!-- Guide Section -->
+        <div id="guide-section" class="hidden">
+            <div class="header-nav">
+                <button onclick="goBack()" class="back-btn">← Home</button>
+                <h2 id="guide-title"></h2>
+            </div>
+            <div id="guide-list" class="list-container"></div>
+        </div>
+    </div>
+
+    <!-- Modal for Preview & Playground -->
+<div id="previewModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="previewTitle"></h3>
+        
+        <div class="modal-body">
+            <!-- Jiha dial l-koud (Interactive Editor) -->
+            <div class="code-section">
+                <h4>📜 Edit Code & Test:</h4>
+                <textarea id="liveEditor" spellcheck="false" oninput="updateLivePreview()"></textarea>
+            </div>
+            
+            <!-- Jiha dial l-natija -->
+            <div class="preview-section">
+                <h4>💻 Live Result:</h4>
+                <div id="previewResult" class="result-box"></div>
+            </div>
+        </div>
+        <p style="font-size: 0.8rem; color: #888; margin-top: 10px;">💡 T9der t-bdl l-koud hna o tchouf l-natija deghya!</p>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
